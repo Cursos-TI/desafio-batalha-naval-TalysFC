@@ -22,6 +22,10 @@ int main(){
     int navio2[3] = {3, 3, 3}; //criação navio vertical (novato)
 
 
+    int navio3[3] = {3, 3, 3}; //criação navio diagonal (aventureiro)
+    int navio4[3] = {3, 3, 3}; //criação navio diagonal (aventureiro)
+
+
     for(int coluna = 0; coluna < 3; coluna++){ //posição predefinida do navio horizontal (novato)
         tabuleiro[1][5 + coluna] = navio1[coluna]; 
     }
@@ -29,6 +33,16 @@ int main(){
 
     for(int linha = 0; linha < 3; linha++){ //posição predefinida do navio vertical (novato)
         tabuleiro[5 + linha][1] = navio2[linha];
+    }
+
+
+    for(int linha = 0, coluna = 0; linha < 3, coluna < 3; linha++, coluna++){ //posição predefinida do navio diagonal (aventureiro)
+        tabuleiro[7 + linha][7 + coluna] = navio3[linha];
+    }
+
+
+    for(int linha = 0, coluna = 0; linha < 3, coluna < 3; linha++, coluna++){ //posição predefinida do navio diagonal (aventureiro)
+        tabuleiro[2 - linha][0 + coluna] = navio3[linha];
     }
 
 
